@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,11 +73,11 @@
         }
 
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
             line-height: 1.6;
             color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
         }
 
@@ -152,27 +151,27 @@
         }
 
         .definition {
-            background: linear-gradient(135deg, #e8f4f8 0%, #d4e7f0 100%);
+            /* background: linear-gradient(135deg, #e8f4f8 0%, #d4e7f0 100%);
             border-left: 5px solid #3498db;
         }
 
         .proposition, .theorem, .corollary {
-            background: linear-gradient(135deg, #f0f7ef 0%, #e1f0dd 100%);
+            /* background: linear-gradient(135deg, #f0f7ef 0%, #e1f0dd 100%);
             border-left: 5px solid #27ae60;
         }
 
         .lemma {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            /* background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
             border-left: 5px solid #ff9800;
         }
 
         .algorithm {
-            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            /* background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
             border-left: 5px solid #9c27b0;
         }
 
         .proof {
-            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            /* background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
             border-left: 5px solid #f39c12;
         }
 
@@ -202,7 +201,7 @@
 
         .canvas-container {
             margin: 30px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 35px;
             border-radius: 12px;
             border: 2px solid #ffffff;
@@ -285,15 +284,15 @@
         }
 
         button.secondary {
-            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+            /* background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
         }
 
         button.success {
-            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            /* background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
         }
 
         button.danger {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            /* background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
         }
 
         .caption {
@@ -305,7 +304,7 @@
         }
 
         .abstract {
-            background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+            /* background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
             padding: 30px;
             margin: 30px 0;
             border-radius: 8px;
@@ -315,7 +314,7 @@
         }
 
         .info-box {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+            /* background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
             border: 2px solid #ffc107;
             border-radius: 8px;
             padding: 20px;
@@ -436,7 +435,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+            /* background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
             transition: width 0.3s;
             display: flex;
             align-items: center;
@@ -570,7 +569,735 @@
         .controls button:hover {
             background: #229954;
         }
-</style>
+
+        
+        
+        /* Clear Bordered Sections - Each section has its own frame */
+        
+        .section-container {
+            background: white !important;
+            max-width: 1100px;
+            margin: 50px auto !important;
+            padding: 40px !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 
+                        0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+            position: relative;
+            overflow: visible !important;
+            border: 3px solid #e2e8f0 !important;
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        
+        .section-container:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25),
+                        0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+            border-color: #cbd5e0 !important;
+        }
+
+        
+        
+        /* Remove the old accent bar since we have borders now */
+        /* More prominent colorful accent bars */
+        .section-container::before {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            bottom: -3px;
+            width: 8px;
+            border-radius: 20px 0 0 20px;
+        }
+        
+        
+        /* Add a subtle inner glow to enhance the border */
+        .section-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 18px;
+            pointer-events: none;
+            box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.05);
+        }
+
+        
+        /* Vibrant Headers */
+        h1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea !important;
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, #667eea, #764ba2) 1;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: #764ba2 !important;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        /* Colorful Controls */
+        .controls {
+            background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%) !important;
+            padding: 20px !important;
+            border-radius: 15px !important;
+            border: 2px solid rgba(102, 126, 234, 0.3) !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1) !important;
+            margin: 15px 0 !important;
+        }
+        
+        .control-group {
+            background: white !important;
+            padding: 12px !important;
+            margin: 8px 0 !important;
+            border-radius: 10px !important;
+            border-left: 4px solid #667eea !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+        }
+        
+        /* Vibrant Buttons */
+        button, .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 24px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        button:hover, .button:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+        }
+        
+        button:active {
+            transform: translateY(0) !important;
+        }
+        
+        /* Different button colors for different actions */
+        button[onclick*="export"], button[onclick*="Export"] {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4) !important;
+        }
+        
+        button[onclick*="Play"], button[onclick*="play"] {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+            box-shadow: 0 4px 15px rgba(67, 233, 123, 0.4) !important;
+        }
+        
+        button[onclick*="Stop"], button[onclick*="stop"] {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+            box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4) !important;
+        }
+        
+        button[onclick*="Reset"], button[onclick*="reset"] {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4) !important;
+        }
+        
+        /* Canvas Styling */
+        canvas {
+            border-radius: 15px !important;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15) !important;
+            border: 3px solid transparent !important;
+            background: white !important;
+        }
+        
+        /* Input Styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.6);
+            border: 3px solid #667eea;
+        }
+        
+        input[type="number"],
+        input[type="text"],
+        select {
+            border: 2px solid #e0e7ff !important;
+            border-radius: 8px !important;
+            padding: 8px 12px !important;
+            font-size: 1em !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #667eea !important;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+            outline: none !important;
+        }
+        
+        /* Checkbox Styling */
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+        
+        /* Labels */
+        label {
+            color: #2d3748 !important;
+            font-weight: 500 !important;
+            font-size: 0.95em !important;
+        }
+        
+        /* Info boxes */
+        .info-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 100%);
+            border-left: 5px solid #667eea;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+        }
+        
+        /* Accent colors for different sections */
+        .section-container:nth-child(1) h2 { color: #667eea !important; }
+        .section-container:nth-child(2) h2 { color: #764ba2 !important; }
+        .section-container:nth-child(3) h2 { color: #f093fb !important; }
+        .section-container:nth-child(4) h2 { color: #4facfe !important; }
+        .section-container:nth-child(5) h2 { color: #43e97b !important; }
+        .section-container:nth-child(6) h2 { color: #fa709a !important; }
+        .section-container:nth-child(7) h2 { color: #6366f1 !important; }
+        .section-container:nth-child(8) h2 { color: #8b5cf6 !important; }
+        .section-container:nth-child(9) h2 { color: #ec4899 !important; }
+        .section-container:nth-child(10) h2 { color: #f59e0b !important; }
+
+        
+        
+        
+        
+        
+        
+        /* 3Blue1Brown Mathematical Aesthetic */
+        
+        /* Signature dark blue background */
+        body {
+            background: #0b0e1b !important;
+            background-image: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.08) 0%, transparent 50%) !important;
+            font-family: 'CMU Serif', 'Computer Modern', 'Latin Modern Roman', Georgia, serif;
+            color: #e0e7ff;
+            padding: 40px 20px;
+            min-height: 100vh;
+            animation: none !important;
+        }
+        
+        .paper-container {
+            background: transparent !important;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 !important;
+            box-shadow: none !important;
+        }
+        
+        /* Individual section cards - dark theme */
+        .section-container {
+            background: linear-gradient(135deg, #1a2332 0%, #15192b 100%) !important;
+            max-width: 1100px;
+            margin: 50px auto !important;
+            padding: 45px !important;
+            border-radius: 16px !important;
+            border: 2px solid rgba(59, 130, 246, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(59, 130, 246, 0.1),
+                        inset 0 1px 0 rgba(59, 130, 246, 0.1) !important;
+            position: relative;
+            overflow: visible !important;
+            transition: all 0.4s ease !important;
+        }
+        
+        .section-container:hover {
+            transform: translateY(-4px) !important;
+            border-color: rgba(96, 165, 250, 0.5) !important;
+            box-shadow: 0 12px 48px rgba(59, 130, 246, 0.15),
+                        0 0 0 1px rgba(59, 130, 246, 0.2) !important;
+        }
+        
+        /* 3B1B signature blue accent bar */
+        .section-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(180deg, #3b82f6, #60a5fa, #93c5fd);
+            border-radius: 16px 0 0 16px;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        /* Remove the decorative circle */
+        .section-container::after {
+            display: none;
+        }
+        
+        /* Beautiful mathematical typography */
+        h1 {
+            text-align: center;
+            font-size: 3.2em;
+            font-weight: 300;
+            margin: 50px 0 70px 0;
+            color: #e0e7ff;
+            font-family: 'CMU Serif', 'Computer Modern', Georgia, serif;
+            letter-spacing: 1px;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        h2 {
+            color: #60a5fa !important;
+            font-size: 2.4em !important;
+            font-weight: 400 !important;
+            margin: 0 0 30px 0 !important;
+            padding: 0 0 20px 0 !important;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3) !important;
+            font-family: 'CMU Serif', 'Computer Modern', Georgia, serif;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+        
+        h3 {
+            color: #93c5fd !important;
+            font-size: 1.6em !important;
+            font-weight: 400 !important;
+            margin: 25px 0 15px 0 !important;
+            font-family: 'CMU Serif', 'Computer Modern', Georgia, serif;
+        }
+        
+        /* Canvas - prominent display */
+        canvas {
+            display: block !important;
+            margin: 35px auto !important;
+            max-width: 100% !important;
+            border-radius: 12px !important;
+            border: 2px solid rgba(59, 130, 246, 0.3) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                        0 0 40px rgba(59, 130, 246, 0.15) !important;
+            background: #000 !important;
+        }
+        
+        /* Clean controls */
+        .controls {
+            background: rgba(26, 35, 50, 0.6) !important;
+            backdrop-filter: blur(10px) !important;
+            padding: 25px !important;
+            border-radius: 12px !important;
+            margin: 25px 0 !important;
+            border: 1px solid rgba(59, 130, 246, 0.2) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .control-group {
+            background: rgba(21, 25, 43, 0.8) !important;
+            padding: 16px !important;
+            margin: 12px 0 !important;
+            border-radius: 8px !important;
+            border-left: 3px solid #3b82f6 !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .control-group:hover {
+            transform: translateX(4px) !important;
+            border-left-color: #60a5fa !important;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2) !important;
+        }
+        
+        /* Stats boxes */
+        #eulerRiemannStats,
+        #channelStats {
+            background: rgba(59, 130, 246, 0.1) !important;
+            padding: 20px !important;
+            border-radius: 12px !important;
+            margin: 25px 0 !important;
+            border: 1px solid rgba(59, 130, 246, 0.3) !important;
+            color: #e0e7ff !important;
+        }
+        
+        /* Text styling */
+        p, div, span {
+            color: #cbd5e1 !important;
+            line-height: 1.8 !important;
+            font-size: 1.05em !important;
+        }
+        
+        strong {
+            color: #e0e7ff !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Labels */
+        label {
+            color: #cbd5e1 !important;
+            font-weight: 400 !important;
+            font-size: 1em !important;
+        }
+        
+        /* 3B1B style buttons - signature blue */
+        button, .button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+            color: white !important;
+            border: 1px solid rgba(96, 165, 250, 0.3) !important;
+            padding: 14px 28px !important;
+            border-radius: 10px !important;
+            font-weight: 500 !important;
+            font-size: 0.95em !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+            text-transform: none !important;
+            letter-spacing: 0.3px !important;
+            margin: 5px !important;
+        }
+        
+        button:hover {
+            transform: translateY(-2px) !important;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
+            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.4),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        button:active {
+            transform: translateY(0) !important;
+        }
+        
+        /* Different button types - still blue themed */
+        button[onclick*="export"], button[onclick*="Export"] {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+            box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3) !important;
+        }
+        
+        button[onclick*="Play"], button[onclick*="play"] {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3) !important;
+        }
+        
+        button[onclick*="Stop"], button.secondary {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
+        }
+        
+        /* Input styling */
+        input[type="number"],
+        input[type="text"],
+        select {
+            background: rgba(15, 23, 42, 0.8) !important;
+            border: 1px solid rgba(59, 130, 246, 0.3) !important;
+            border-radius: 8px !important;
+            padding: 10px 15px !important;
+            font-size: 0.95em !important;
+            color: #e0e7ff !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        input:focus, select:focus {
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+            outline: none !important;
+            background: rgba(15, 23, 42, 1) !important;
+        }
+        
+        /* Range sliders - blue theme */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(59, 130, 246, 0.3);
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5),
+                        0 0 0 4px rgba(59, 130, 246, 0.2);
+            border: 2px solid #1e293b;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #60a5fa;
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.6),
+                        0 0 0 6px rgba(59, 130, 246, 0.3);
+        }
+        
+        
+        
+        /* Better visible checkboxes for dark theme */
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3b82f6;
+            border-radius: 4px;
+            background: rgba(15, 23, 42, 0.8);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+        
+        input[type="checkbox"]:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #60a5fa;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+        
+        input[type="checkbox"]:checked {
+            background: #3b82f6;
+            border-color: #60a5fa;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        input[type="checkbox"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Make label clickable and visible */
+        label {
+            color: #cbd5e1 !important;
+            font-weight: 400 !important;
+            font-size: 1.05em !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            cursor: pointer !important;
+            user-select: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        label:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: #e0e7ff !important;
+        }
+
+        /* Color picker inputs */
+        input[type="color"] {
+            background: rgba(15, 23, 42, 0.8) !important;
+            border: 2px solid rgba(59, 130, 246, 0.3) !important;
+            border-radius: 6px !important;
+            cursor: pointer;
+        }
+        
+        /* Remove alternating backgrounds */
+        .section-container:nth-child(odd),
+        .section-container:nth-child(even) {
+            background: linear-gradient(135deg, #1a2332 0%, #15192b 100%) !important;
+        }
+        
+        /* Selection color */
+        ::selection {
+            background: rgba(59, 130, 246, 0.3);
+            color: #e0e7ff;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #0b0e1b;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            border-radius: 10px;
+            border: 2px solid #0b0e1b;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #60a5fa, #3b82f6);
+        }
+
+        /* Animations and Effects */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .section-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .section-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        canvas {
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        
+        canvas:hover {
+            transform: scale(1.01) !important;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2) !important;
+        }
+        
+        button {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Glowing effect on inputs */
+        input:focus, select:focus {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+        
+        /* Tooltip effects */
+        [title]:hover {
+            position: relative;
+        }
+        
+        /* Card hover effects */
+        .control-group:hover {
+            transform: translateX(5px);
+            border-left-width: 6px !important;
+            transition: all 0.3s ease;
+        }
+        
+        /* Shimmer effect for headers */
+        h1 {
+            position: relative;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #667eea 75%, #764ba2 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s linear infinite;
+        }
+        
+        /* Loading pulse for canvases */
+        @keyframes canvasPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        canvas[id]:empty {
+            animation: canvasPulse 2s ease-in-out infinite;
+        }
+
+        </style>
 </head>
 <body>
 <div>
@@ -1161,7 +1888,53 @@ function is_prime_candidate(m, k, slice="half",
                 </div>
             </div>
 
-            <div class="controls" style="margin-top: 10px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 12px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+            <div class="controls" style="margin-top: 10px; background: rgba(59, 130, 246, 0.08); padding: 15px; border-radius: 12px; border: 2px solid rgba(59, 130, 246, 0.3);">
+                <h3 style="margin: 0 0 15px 0; font-size: 1.1em; color: #60a5fa;">Track GCD=1 Values (Coprime Residues)</h3>
+                
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
+                    <div class="control-group" style="flex: 1; min-width: 150px;">
+                        <label for="gcdModulus">Modulus n:</label>
+                        <input type="number" id="gcdModulus" value="30" min="2" max="200" style="width: 100%;">
+                    </div>
+                    
+                    <div class="control-group">
+                        <button onclick="updateGCDTracking()" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;">
+                            Track GCD(r,n)=1
+                        </button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="trackGCD1" onchange="drawConcentricRings()">
+                            Show GCD=1 only
+                        </label>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="trackNonGCD1" onchange="drawConcentricRings()">
+                            Show non-GCD=1
+                        </label>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" id="enableWrapAround" checked onchange="drawConcentricRings()">
+                            Enable wrap-around
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="gcdInfo" style="margin-top: 15px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border-left: 4px solid #10b981; display: none;">
+                    <strong style="color: #10b981;">Tracked values:</strong>
+                    <div id="gcdValuesList" style="color: #cbd5e1; margin-top: 5px; font-family: 'Courier New', monospace;"></div>
+                    <div style="margin-top: 8px; font-size: 0.9em; color: #93c5fd;">
+                        φ(n) = <span id="eulerPhiValue">-</span> coprime values
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls" style="margin-top: 10px; /* background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 12px; border-radius: 8px; border-left: 4px solid #3b82f6;">
                 <div class="control-group">
                     <label style="font-weight: 600; margin-right: 15px; color: #1e40af;">Dirichlet Characters Filter:</label>
                 </div>
@@ -1993,7 +2766,7 @@ function is_prime_candidate(m, k, slice="half",
                 <button onclick="drawHeegnerField()">Visualize</button>
                 <button class="success" onclick="exportHeegnerVisualization('4k')">📸 Export 4K</button>
                 <button class="success" onclick="exportHeegnerVisualization('2k')">📸 Export 2K</button>
-                <button onclick="exportHeegnerCSV()" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%); color: white;">📊 Export CSV</button>
+                <button onclick="exportHeegnerCSV()" style="/* background: linear-gradient(135deg, #27ae60 0%, #229954 100%); color: white;">📊 Export CSV</button>
                 <button class="secondary" onclick="compareAllFields()">🔬 Compare All 9 Fields</button>
             </div>
 
@@ -5706,7 +6479,7 @@ function drawConcentricRings() {
                     <style>
                         body {
                             font-family: Arial, sans-serif;
-                            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                             padding: 20px;
                             margin: 0;
                         }
@@ -5747,7 +6520,43 @@ function drawConcentricRings() {
                             color: #666;
                             margin-top: 10px;
                         }
-                    </style>
+                    
+        
+        /* Extra visual separation - alternating subtle tints */
+        .section-container:nth-child(odd) {
+            background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%) !important;
+        }
+        
+        .section-container:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 0%, #fffbfa 100%) !important;
+        }
+        
+        /* Add a subtle inner shadow for more depth */
+        .section-container {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                        0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        /* Make borders more visible on hover */
+        .section-container:hover {
+            border-color: #a0aec0 !important;
+        }
+        
+        /* Add section numbers as decorative elements */
+        .section-container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.08);
+            z-index: 0;
+        }
+
+        </style>
                 </head>
                 <body>
                     <div class="container">
@@ -5758,7 +6567,7 @@ function drawConcentricRings() {
                         <div class="grid">
                             ${fields.map(D => `
                                 <div class="field-box">
-                                    <h3 style="color: #000000;">${fieldNames[D]}</h3 style="color: #000000;">
+                                    <h3 style="color: #000000;">${fieldNames[D]}</h3>
                                     <canvas id="canvas${D}" width="300" height="300"></canvas>
                                     <div class="info">D = ${D}</div>
                                 </div>
@@ -5953,14 +6762,26 @@ function drawConcentricRings() {
                         const x = centerX + radius * Math.cos(angle);
                         const y = centerY + radius * Math.sin(angle);
                         
-                        ctx.fillStyle = isPrimeM ? '#4ecdc4' : '#95a5a6';
+                        // Color based on density gradient if enabled
+                        let pointColor;
+                        if (showDensity) {
+                            // Color by density - more points = brighter
+                            const density = phi / m; // Fraction of coprime points
+                            const hue = 200 - (density * 150); // Blue to green
+                            pointColor = `hsl(${hue}, 80%, 60%)`;
+                        } else {
+                            pointColor = isPrimeM ? '#4ecdc4' : '#95a5a6';
+                        }
+                        
+                        ctx.fillStyle = pointColor;
                         ctx.beginPath();
-                        ctx.arc(x, y, isPrimeM ? 2.5 : 1.5, 0, 2 * Math.PI);
+                        ctx.arc(x, y, isPrimeM ? pointSize : pointSize * 0.6, 0, 2 * Math.PI);
                         ctx.fill();
                     }
                 }
                 
-                if (isPrimeM && m <= 23) {
+                // Show prime labels if enabled
+                if (showLabels && isPrimeM && m <= 23) {
                     ctx.fillStyle = '#4ecdc4';
                     ctx.font = '11px Arial';
                     ctx.fillText(`p=${m}`, centerX + radius + 5, centerY);
@@ -5983,15 +6804,18 @@ function drawConcentricRings() {
                     current = (current * orbitBase) % orbitM;
                 }
                 
-                ctx.strokeStyle = 'rgba(255, 200, 0, 0.6)';
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                orbitPoints.forEach((p, i) => {
-                    if (i === 0) ctx.moveTo(p.x, p.y);
-                    else ctx.lineTo(p.x, p.y);
-                });
-                ctx.closePath();
-                ctx.stroke();
+                // Show connections if enabled
+                if (showConnections) {
+                    ctx.strokeStyle = 'rgba(255, 200, 0, 0.6)';
+                    ctx.lineWidth = orbitWidth;
+                    ctx.beginPath();
+                    orbitPoints.forEach((p, i) => {
+                        if (i === 0) ctx.moveTo(p.x, p.y);
+                        else ctx.lineTo(p.x, p.y);
+                    });
+                    ctx.closePath();
+                    ctx.stroke();
+                }
                 
                 orbitPoints.forEach((p, i) => {
                     ctx.fillStyle = i === 0 ? '#ff3860' : '#ffdd57';
@@ -6302,6 +7126,120 @@ function drawConcentricRings() {
 
         
         
-</script>
+
+        
+        // Toggle pulse animation for Euler-Riemann
+        function togglePulseAnimation() {
+            const checkbox = document.getElementById('erPulseAnimation');
+            const canvas = document.getElementById('eulerRiemannCanvas');
+            
+            if (checkbox && checkbox.checked) {
+                // Add pulse animation
+                canvas.style.animation = 'canvasPulse 2s ease-in-out infinite';
+            } else {
+                // Remove pulse animation
+                canvas.style.animation = 'none';
+            }
+        }
+
+    
+        
+        // Initialize visualizations on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Draw Euler-Riemann visualization
+            if (document.getElementById('eulerRiemannCanvas')) {
+                drawEulerRiemann();
+            }
+            
+            // Draw other initial visualizations
+            if (document.getElementById('channelCanvas')) {
+                const modInput = document.getElementById('modInput');
+                if (modInput && modInput.value) {
+                    drawChannelRing();
+                }
+            }
+            
+            if (document.getElementById('concentricCanvas')) {
+                drawConcentricRings();
+            }
+            
+            console.log('Visualizations initialized');
+        });
+
+    
+        
+        // Track GCD=1 values function
+        function updateGCDTracking() {
+            const modulus = parseInt(document.getElementById('gcdModulus').value) || 30;
+            const enableWrap = document.getElementById('enableWrapAround').checked;
+            
+            // Calculate all coprime values (GCD=1)
+            const gcd1Values = [];
+            const nonGcd1Values = [];
+            
+            for (let r = 1; r < modulus; r++) {
+                if (gcd(r, modulus) === 1) {
+                    gcd1Values.push(r);
+                } else {
+                    nonGcd1Values.push(r);
+                }
+            }
+            
+            // Add wrap-around value if enabled
+            if (enableWrap && gcd1Values.length > 0) {
+                // The next coprime after modulus
+                let nextCoprime = modulus + 1;
+                while (nextCoprime < modulus * 2 && gcd(nextCoprime, modulus) !== 1) {
+                    nextCoprime++;
+                }
+                if (gcd(nextCoprime, modulus) === 1) {
+                    gcd1Values.push(nextCoprime);
+                }
+            }
+            
+            // Update the trackMultipleR input with GCD=1 values
+            document.getElementById('trackMultipleR').value = gcd1Values.join(',');
+            
+            // Check the appropriate tracking options
+            document.getElementById('trackGCD1').checked = true;
+            document.getElementById('trackNonGCD1').checked = false;
+            
+            // Show info panel
+            const infoPanel = document.getElementById('gcdInfo');
+            const valuesList = document.getElementById('gcdValuesList');
+            const phiValue = document.getElementById('eulerPhiValue');
+            
+            infoPanel.style.display = 'block';
+            
+            // Format the values list
+            const phi = eulerTotient(modulus);
+            valuesList.innerHTML = `
+                <div style="margin-bottom: 8px;">
+                    <strong>GCD(r, ${modulus}) = 1:</strong> 
+                    r ∈ {${gcd1Values.map(v => v > modulus ? `<span style="color: #10b981;">${v}</span>` : v).join(', ')}}
+                </div>
+                ${nonGcd1Values.length > 0 ? `
+                <div style="opacity: 0.7; font-size: 0.9em;">
+                    <strong>GCD(r, ${modulus}) ≠ 1:</strong> 
+                    r ∈ {${nonGcd1Values.join(', ')}}
+                </div>
+                ` : ''}
+            `;
+            
+            phiValue.textContent = phi;
+            
+            // Redraw with new tracking
+            drawConcentricRings();
+        }
+        
+        // Update tracking when wrap-around changes
+        function updateWrapAroundTracking() {
+            const modulus = parseInt(document.getElementById('gcdModulus').value);
+            if (modulus && document.getElementById('gcdInfo').style.display === 'block') {
+                updateGCDTracking();
+            }
+        }
+
+    </script>
 </body>
 </html>
